@@ -8,6 +8,8 @@
 Vagrant.configure("2") do |config|
  
 	config.vm.box = "centos/7"
+	## To enable synced folders install guest additions and uncomment the synced folder line
+	# Install Guest additions https://www.if-not-true-then-false.com/2010/install-virtualbox-guest-additions-on-fedora-centos-red-hat-rhel/
 	# config.vm.synced_folder ".", "/code"
 	config.vm.network "forwarded_port", guest: 80, host: 8080
 
