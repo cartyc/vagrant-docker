@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 	config.vm.network "forwarded_port", guest: 80, host: 8080
 
 
-	# If this box will be used on the City of Ottawa network, add some certs to the vm's
+	# If this box will be used on the a network, add some certs to the vm's
 	# cert CA store.  This is needed to run git and composer (and probably others)
 	config.vm.provision "file", source: "cacert.pem", destination: "/tmp/CESCA001.pem"
 	script = StringIO.new
